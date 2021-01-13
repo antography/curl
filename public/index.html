@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curl</title>
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <div class="main">
+
+      <!-- topbar -->
+      <div class="topnav">
+        <div class="ctx-member-toggle" onclick="toggleview('ctx-members')">
+          <div class="member-toggle-icon">
+            <i class="fa fa-users " aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="ctx-search">
+          <div class="ctx-search-wrapper">
+            <input class="ctx-search-input" type="text" placeholder="Search">
+          </div>
+        </div>
+
+        <div class="user-controls">
+          <!-- User pfp-->
+          <div class="user-pfp-wrapper">
+            <img class="user-pfp" src="/public/img/lom.jpg" alt="Generic Profile Picture">
+            <div class="user-status online"><i class="fa fa-circle" aria-hidden="true"></i></div>
+            <div class="user-settings-hover-wrapper" onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
+              <div class="user-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            </div>
+          </div>
+          <!-- End user pfp -->
+          <div class="user-settings-quickaccess fadeout" id="u-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('u-s-qa', 0, defocus = true)">
+            <br>
+            <hr>
+          </div>
+          <div class="user-titles-wrapper">
+            <div class="user-title">fjhyqwadas</div>
+            <div class="user-subtitle">"If brute force doesn't work, you're not using enough of it" - Issac Arthur</div>
+          </div>
+
+          <div class="user-audio-control-wrapper">
+            <div class="user-audio-controls"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+            <div class="user-audio-controls"><i class="fa fa-headphones" aria-hidden="true"></i></div>
+          </div>
+        </div>
+
+        <!-- contextual server controls-->
+        <div class="ctx-server-controls">
+          <div class="ctx-server-icon-wrapper">
+            <img class="ctx-server-icon" src="/public/img/bench.jpg" alt="Generic Profile Picture">
+            <div class="ctx-server-settings-hover-wrapper" onclick="toggleHidden('c-s-qa', 1); document.getElementById('c-s-qa').focus();">
+              <div class="ctx-server-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            </div>
+          </div>
+          
+          <div class="ctx-server-settings-quickaccess fadeout" id="c-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('c-s-qa',1 , defocus = true)">
+            <br>
+            <hr>
+          </div>
+          <div class="ctx-server-titles-wrapper">
+            <div class="ctx-server-title"> so ill just abuse js instead</div>
+          </div>
+        </div>
+      </div>
+      <!-- End topbar-->
+
+      <div class="content-row">
+<!-- Begin Left bar-->
+        <div class="left-panel minimized" id="left-panel">
+          <div class="contacts">
+            <div class="contacts-icon-wrapper">
+              <div class="contacts-icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
+            </div>
+            <div class="contacts-misc-wrapper">
+              <div class="contacts-misc-content">
+                <div class="contacts-misc-content">
+                <div class="contacts-titles-wrapper">
+                  <div class="contacts-title">Contacts</div>
+                  <div class="contacts-subtitle">47 <i class="fa fa-address-book" aria-hidden="true"></i></div>
+                </div>
+              </div>
+              </div>
+             
+            </div>
+          </div>
+<!-- domains -->
+          <div class="domain">
+            <div class="domain-icon-wrapper">
+              <img class="domain-icon" src="/public/img/bird.jpg" alt="Generic Profile Picture">
+            </div>
+            <div class="domain-misc-wrapper">
+              <div class="domain-misc-content">
+                <div class="domain-titles-wrapper">
+                  <div class="domain-title">css doesnt like trimming floats</div>
+                  <div class="domain-subtitle">1038 <i class="fa fa-users " aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain active">
+            <div class="domain-icon-wrapper">
+              <img class="domain-icon" src="/public/img/bench.jpg" alt="Generic Profile Picture">
+            </div>
+            <div class="domain-misc-wrapper">
+              <div class="domain-misc-content">
+                <div class="domain-titles-wrapper">
+                  <div class="domain-title">so ill just abuse js instead</div>
+                  <div class="domain-subtitle">127 <i class="fa fa-users " aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- end domains -->
+        </div>
+<!-- End left bar-->
+<!-- Begin domain contextual menu-->
+        <div class="ctx-panel">
+          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Welcome</div></div>
+          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Rules</div></div>
+          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> General</div></div>
+
+          <div class="ctx-domain-channel-group has-background-light" id="dcg-1121337">
+            <div class="ctx-dcg-title-wrapper  has-text-dar noselect" onclick="toggleDCG('1121337')">
+              <div class="ctx-dcg-min-max" id="dcg-minmax-1121337">-</div>
+              <div class="ctx-dcg-title">
+                Legally questional group
+              </div>
+            </div>
+            <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-1121337">
+              <div class="ctx-domain-channel-text has-text-light active noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Nothing to see here</div></div>
+              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> FBI go away</div></div>
+              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Homework help</div></div>
+            </div>
+            
+          </div>
+
+          <div class="ctx-domain-channel-group has-background-light" id="dcg-11213327">
+            <div class="ctx-dcg-title-wrapper  has-text-dark noselect" onclick="toggleDCG('11213237')">
+              <div class="ctx-dcg-min-max" id="dcg-minmax-11213237">-</div>
+              <div class="ctx-dcg-title">
+                Less legally questional group
+              </div>
+            </div>
+            <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-11213237">
+              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Wheese Cheel</div></div>
+              
+              <div class="ctx-domain-channel-group has-background-dark" id="dcg-11213327">
+                <div class="ctx-dcg-title-wrapper  has-text-light noselect" onclick="toggleDCG('112132s37')">
+                  <div class="ctx-dcg-min-max" id="dcg-minmax-112132s37">-</div>
+                  <div class="ctx-dcg-title">
+                    Baby group
+                  </div>
+                </div>
+                <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-112132s37">
+                  <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Gerald</div></div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="toggle-left-panel" onclick="toggleLeft('left-panel')">
+
+          </div>
+        </div>
+<!-- End domain contextual menu-->
+<!-- Begin channel context-->
+        <div class="ctx-channel">
+
+        </div>
+<!-- End channel context -->
+      </div>
+
+    </div>
+
+    <div id="ctx-members" class="ctx-members" style="display: none;"><br></div>
+  </div>
+
+  <script src="/public/js/main.js"></script>
+</body>
+</html>
