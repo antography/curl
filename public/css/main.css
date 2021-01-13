@@ -100,18 +100,10 @@ input[type=text]
   z-index: 60;
 }
 
-.user-status.online{
-  color: #00981E;
-}
-.user-status.inactive {
-  color: #BBA61D;
-}
-.user-status.busy {
-  color: #BB1D1D;
-}
-.user-status.offline {
-  color: #9C9C9C;
-}
+.user-status.online{ color: #00981E;}
+.user-status.inactive { color: #BBA61D;}
+.user-status.busy { color: #BB1D1D;}
+.user-status.offline { color: #9C9C9C;}
 
 .user-settings-hover-wrapper {
   width: 48px;
@@ -348,7 +340,8 @@ input[type=text]
   flex-direction: row;
   flex:1;
   height: 100%;
-  margin-left: 4px;
+  width: 100%;
+  margin-left: 10px;
   margin-right: 8px;
 }
 
@@ -356,12 +349,14 @@ input[type=text]
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   
   
 }
 .ctx-channel-info-title {
   flex: 1;
   padding-top: 8px;
+  width: 100%;
   font-weight: bold;
   white-space: nowrap;
   text-overflow: " ...";
@@ -369,6 +364,7 @@ input[type=text]
 }
 .ctx-channel-info-subtitle {
   flex: 1;
+  width: 100%;
   font-size: 0.85rem;
   padding-left: 1.25rem;
   white-space: nowrap;
@@ -405,11 +401,7 @@ input[type=text]
   overflow: auto;
   z-index: 15;
 }
-.ctx-channel{
-  background-color: #606060;
-  flex: 1;
-  overflow: auto;
-}
+
 .toggle-left-panel {
   position: absolute;
   bottom: 0;
@@ -602,6 +594,10 @@ padding-left: 2px;
   flex-direction: row;
   cursor: pointer;
 }
+
+.ctx-domain-channel-text:hover {
+  background-color: #2e2e2e7c;
+}
 .ctx-domain-channel-text.active {
   background-color: #353535bb;
 }
@@ -653,4 +649,22 @@ padding-left: 2px;
 
 .ctx-dcg-child-wrapper.hidden {
   display: none;
+}
+
+.ctx-channel{
+  background-color: #606060;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.ctx-channel-history {
+  flex:1;
+  background-color: #2A2A2A;
+}
+
+.ctx-channel-comms{
+  min-height: 100px;
+  max-height: 500px;
 }
