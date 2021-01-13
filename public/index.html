@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curl</title>
-  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="../public/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -14,22 +14,12 @@
 
       <!-- topbar -->
       <div class="topnav">
-        <div class="ctx-member-toggle" onclick="toggleview('ctx-members')">
-          <div class="member-toggle-icon">
-            <i class="fa fa-users " aria-hidden="true"></i>
-          </div>
-        </div>
-
-        <div class="ctx-search">
-          <div class="ctx-search-wrapper">
-            <input class="ctx-search-input" type="text" placeholder="Search">
-          </div>
-        </div>
+        
 
         <div class="user-controls">
           <!-- User pfp-->
           <div class="user-pfp-wrapper">
-            <img class="user-pfp" src="/public/img/lom.jpg" alt="Generic Profile Picture">
+            <img class="user-pfp" src="../public/img/lom.jpg" alt="Generic Profile Picture">
             <div class="user-status online"><i class="fa fa-circle" aria-hidden="true"></i></div>
             <div class="user-settings-hover-wrapper" onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
               <div class="user-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
@@ -54,7 +44,7 @@
         <!-- contextual server controls-->
         <div class="ctx-server-controls">
           <div class="ctx-server-icon-wrapper">
-            <img class="ctx-server-icon" src="/public/img/bench.jpg" alt="Generic Profile Picture">
+            <img class="ctx-server-icon" src="../public/img/bench.jpg" alt="Generic Profile Picture">
             <div class="ctx-server-settings-hover-wrapper" onclick="toggleHidden('c-s-qa', 1); document.getElementById('c-s-qa').focus();">
               <div class="ctx-server-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
             </div>
@@ -66,6 +56,29 @@
           </div>
           <div class="ctx-server-titles-wrapper">
             <div class="ctx-server-title"> so ill just abuse js instead</div>
+          </div>
+        </div>
+        
+        <div class="ctx-channel-info">
+          <div class="ctx-channel-info-titles-wrapper has-text-light">
+            <div class="ctx-channel-info-title">
+              <i class="fa fa-hashtag" aria-hidden="true"></i> Nothing to see here
+            </div>
+            <div class="ctx-channel-info-subtitle">
+              Seriously, stop looking here
+            </div>
+          </div>
+        </div>
+        
+        <div class="ctx-search">
+          <div class="ctx-search-wrapper">
+            <input class="ctx-search-input" type="text" placeholder="Search">
+          </div>
+        </div>
+
+        <div class="ctx-member-toggle" onclick="toggleview('ctx-members')">
+          <div class="member-toggle-icon">
+            <i class="fa fa-users " aria-hidden="true"></i>
           </div>
         </div>
       </div>
@@ -93,7 +106,7 @@
 <!-- domains -->
           <div class="domain">
             <div class="domain-icon-wrapper">
-              <img class="domain-icon" src="/public/img/bird.jpg" alt="Generic Profile Picture">
+              <img class="domain-icon" src="../public/img/bird.jpg" alt="Generic Profile Picture">
             </div>
             <div class="domain-misc-wrapper">
               <div class="domain-misc-content">
@@ -107,7 +120,7 @@
 
           <div class="domain active">
             <div class="domain-icon-wrapper">
-              <img class="domain-icon" src="/public/img/bench.jpg" alt="Generic Profile Picture">
+              <img class="domain-icon" src="../public/img/bench.jpg" alt="Generic Profile Picture">
             </div>
             <div class="domain-misc-wrapper">
               <div class="domain-misc-content">
@@ -128,7 +141,7 @@
           <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> General</div></div>
 
           <div class="ctx-domain-channel-group has-background-light" id="dcg-1121337">
-            <div class="ctx-dcg-title-wrapper  has-text-dar noselect" onclick="toggleDCG('1121337')">
+            <div class="ctx-dcg-title-wrapper  has-text-dark noselect" onclick="toggleDCG('1121337')">
               <div class="ctx-dcg-min-max" id="dcg-minmax-1121337">-</div>
               <div class="ctx-dcg-title">
                 Legally questional group
@@ -137,7 +150,7 @@
             <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-1121337">
               <div class="ctx-domain-channel-text has-text-light active noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Nothing to see here</div></div>
               <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> FBI go away</div></div>
-              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Homework help</div></div>
+              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> "Homework help"</div></div>
             </div>
             
           </div>
