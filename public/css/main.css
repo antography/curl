@@ -62,7 +62,6 @@ input[type=text]
   background-color: #5A5A5A;
   overflow: hidden;
   height: var(--navHeight);
-  width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -338,37 +337,40 @@ input[type=text]
 .ctx-channel-info {
   display: flex;
   flex-direction: row;
-  flex:1;
+  flex: 1;
   height: 100%;
-  width: 100%;
   margin-left: 10px;
   margin-right: 8px;
+  min-width: 0px;
+  overflow: hidden;
 }
 
 .ctx-channel-info-titles-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  
+  min-width: 0px;
+  overflow: hidden;
   
 }
 .ctx-channel-info-title {
-  flex: 1;
+
   padding-top: 8px;
-  width: 100%;
   font-weight: bold;
   white-space: nowrap;
   text-overflow: " ...";
+  min-width: 0px;
+  overflow: hidden;
 
 }
 .ctx-channel-info-subtitle {
-  flex: 1;
-  width: 100%;
   font-size: 0.85rem;
   padding-left: 1.25rem;
   white-space: nowrap;
+  display:inline-block;
   text-overflow: " ...";
+  min-width: 0px;
+  overflow: hidden;
   
 }
 
@@ -652,19 +654,84 @@ padding-left: 2px;
 }
 
 .ctx-channel{
-  background-color: #606060;
+  background-color: #2A2A2A;
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: auto;
 }
 
-.ctx-channel-history {
-  flex:1;
-  background-color: #2A2A2A;
-}
+
 
 .ctx-channel-comms{
-  min-height: 100px;
   max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.ctx-channel-comms-status {
+padding-bottom: 8px;
+padding-left: 8px;
+}
+
+.ctx-channel-comms-input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.ctx-channel-comms-input-box {
+  padding: 8px;
+  background-color: #7e7e7e33;
+  width: 100%;
+  min-height: 32px;
+  flex:1;
+  border-radius: 10px 0px 0px 10px;
+  
+}
+.ctx-channel-comms-input-attachment {
+  width: 38px;
+  height: 42px;
+  background-color: #444444;
+  cursor: pointer;
+  font-size: 2rem;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+.ctx-channel-comms-input-send {
+  width: 38px;
+  height: 40px;
+  background-color: #3B3B3B;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-top: 8px;
+  
+}
+
+.ctx-channel-comms-input-area {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  resize: none;
+  min-height: 20px;
+  line-height: 16px;
+  margin-top: 8px;
+  max-height: 300px;
+}
+
+.ctx-channel-comms-input-area[contenteditable]:empty::before {
+  content: "Start saying something";
+  color: gray;
+  cursor: text;
+}
+
+.ctx-channel-history {
+  flex:1;
 }
