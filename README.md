@@ -18,5 +18,6 @@
 ## Some day:
 * Video calls
 * Pinboard channel
-* Shared whiteboards
+* Shared whiteboard channels
 * Extensions
+* Internal Screenshots
