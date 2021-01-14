@@ -22,11 +22,11 @@ input[type=text]
   border: 0;
 }
 
-.has-text-light { color:#CCCCCC; }
-.has-text-dark {color: #333333;}
+.has-text-light { color: #CCCCCC;}
+.has-text-dark  { color: #333333;}
 
-.has-background-light { background-color: #CCCCCC;}
-.has-background-dark {background-color: #333333;}
+.has-background-light  { background-color: #CCCCCC;}
+.has-background-dark   { background-color: #333333;}
 .has-background-orange { background-color: #FFA85B;}
 .has-background-yellow { background-color: #FEF568;}
 
@@ -38,6 +38,26 @@ input[type=text]
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A1A1A #33333300 ;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #33333300;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1A1A1A;
+  border-radius: 20px;
 }
 
 /* Styles for base components */
@@ -99,10 +119,10 @@ input[type=text]
   z-index: 60;
 }
 
-.user-status.online{ color: #00981E;}
+.user-status.online   { color: #00981E;}
 .user-status.inactive { color: #BBA61D;}
-.user-status.busy { color: #BB1D1D;}
-.user-status.offline { color: #9C9C9C;}
+.user-status.busy     { color: #BB1D1D;}
+.user-status.offline  { color: #9C9C9C;}
 
 .user-settings-hover-wrapper {
   width: 48px;
