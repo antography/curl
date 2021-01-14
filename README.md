@@ -13,6 +13,7 @@
 * Text & voice 
 * Anonymous access to servers
 * Self-hosting servers
+* Contacts
 
 ## Some day:
 * Video calls

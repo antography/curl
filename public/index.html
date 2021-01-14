@@ -14,21 +14,32 @@
 
       <!-- topbar -->
       <div class="topnav">
-        
 
         <div class="user-controls">
           <!-- User pfp-->
           <div class="user-pfp-wrapper">
             <img class="user-pfp" src="../public/img/lom.jpg" alt="Generic Profile Picture">
-            <div class="user-status online"><i class="fa fa-circle" aria-hidden="true"></i></div>
+            <div class="user-status status-online"><i class="fa fa-circle" aria-hidden="true"></i></div>
             <div class="user-settings-hover-wrapper" onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
               <div class="user-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
             </div>
           </div>
           <!-- End user pfp -->
-          <div class="user-settings-quickaccess fadeout" id="u-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('u-s-qa', 0, defocus = true)">
-            <br>
+          <div class="user-settings-quickaccess fadeout" id="u-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('u-s-qa', 0, true)">
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Settings</div></div>
             <hr>
+            <div class="user-settings-quickaccess-item has-text-light noselect">
+              <div class="user-settings-quickaccess-item-status">
+                <div class="usqis-auto clickable has-text-light">Auto</div>
+                <div class="usqis-divider clickable"></div>
+                <div class="usqis-item status-online clickable usqis-item-active"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                <div class="usqis-item status-inactive clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                <div class="usqis-item status-busy clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                <div class="usqis-item status-offline clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
+              </div>
+            </div>
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Profile</div></div>
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Notifications</div></div>
           </div>
           <div class="user-titles-wrapper">
             <div class="user-title">fjhyqwadas</div>
@@ -50,9 +61,17 @@
             </div>
           </div>
           
-          <div class="ctx-server-settings-quickaccess fadeout" id="c-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('c-s-qa',1 , defocus = true)">
-            <br>
+          <div class="ctx-server-settings-quickaccess fadeout" id="c-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('c-s-qa', 1, true)">
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Settings</div></div>
             <hr>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Overview</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Roles</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Users</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Channels</div></div>
+            <hr>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Stylesheet</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">View Logs</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Notifications</div></div>
           </div>
           <div class="ctx-server-titles-wrapper">
             <div class="ctx-server-title"> so ill just abuse js instead</div>
@@ -96,7 +115,7 @@
                 <div class="contacts-misc-content">
                 <div class="contacts-titles-wrapper">
                   <div class="contacts-title">Contacts</div>
-                  <div class="contacts-subtitle">47 <i class="fa fa-address-book" aria-hidden="true"></i></div>
+                  <div class="contacts-subtitle">Coming to a browser near you soon!</div>
                 </div>
               </div>
               </div>
@@ -213,13 +232,13 @@
 
             <div class="ctx-channel-message-wrapper follower">
               <div class="sender-message-content">
-                Example stuff
+                All this content is hardcoded and filler for now
               </div>
             </div>
-            
+
             <div class="ctx-channel-message-wrapper follower">
               <div class="sender-message-content">
-                Example stuff
+                Inspired by IRC and Slack
               </div>
             </div>
 
