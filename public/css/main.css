@@ -607,6 +607,8 @@ padding-left: 2px;
   z-index: -100;
   
   display: flex;
+  white-space: nowrap;
+  text-overflow: " ...";
 }
 
 .domain:hover {
@@ -701,6 +703,10 @@ font-size: 0.85rem;
 left: 60px;
 z-index: 100;
 margin-top: 20px;
+max-width: 200px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: " ...";
 }
 
 .left-panel.minimized .domain:hover .domain-title-tooltip{
