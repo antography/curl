@@ -22,3 +22,12 @@
 * Shared whiteboard channels
 * Extensions
 * Internal Screenshots
+
+# ?
+### End goal structure:
+
+Strange naming system so that it's impossible to be ambiguous
+* Blocks (server groups)
+  * Buildings (servers)
+    * Floors (channel groups)
+      * Offices (channels)

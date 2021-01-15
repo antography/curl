@@ -1,0 +1,83 @@
+[
+  {
+    "type": "channel-text",
+    "name": "General",
+    "id": "5c786049-4093-4aa0-a565-2310f70d6add",
+    "position": 3
+  },
+  {
+    "type": "channel-text",
+    "name": "Rules",
+    "id": "ac98d0a1-e2cc-4bf4-b5f7-ab617dcb08e1",
+    "position": 2
+  },
+  {
+    "type": "channel-text",
+    "name": "Welcome",
+    "id": "f002393d-a066-4178-a247-f206f639286a",
+    "position": 1
+  },
+  {
+    "type": "group",
+    "name": "Legally questional group",
+    "id": "aaada742-d2aa-41b6-a29e-98b71d7c1431",
+    "classes": "has-background-light has-text-dark",
+    "childClasses": "has-text-dark",
+    "childClassesActive": "",
+    "position": 4,
+    "offices": [
+      {
+        "type": "channel-text",
+        "name": "Nothing to see here",
+        "id": "b12d7770-5933-488f-8fe7-b791ec07bb69",
+        "position": 1
+      },
+      {
+        "type": "channel-text",
+        "name": "FBI go away",
+        "id": "4e6d2a7e-3e4a-4e7c-8813-4ae82ded311d",
+        "position": 3
+      },
+      {
+        "type": "channel-text",
+        "name": "\"Homework help\"",
+        "id": "4976fbc1-3d8a-480d-b0ea-afca36dc0146",
+        "position": 2
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Less legally questional group",
+    "id": "4acc2a12-78be-4d7d-aada-beb32096e4a4",
+    "classes": "has-background-light has-text-dark",
+    "childClasses": "has-text-dark",
+    "childClassesActive": "",
+    "position": 5,
+    "offices": [
+      {
+        "type": "channel-text",
+        "name": "Wheese Cheel",
+        "id": "cbb165cb-78c4-4364-92bc-ddfacef1be80",
+        "position": 1
+      },
+      {
+        "type": "group",
+        "name": "Baby group",
+        "id": "69f924ab-cc51-45b2-9b63-d8a1eca0551f",
+        "classes": "has-background-dark has-text-light",
+        "childClasses": "has-text-light",
+        "childClassesActive": "",
+        "position": 5,
+        "offices": [
+          {
+            "type": "channel-text",
+            "name": "Gerald",
+            "id": "524c2983-7209-4fa1-bfcc-d742c709860e",
+            "position": 1
+          }
+        ]
+      }
+    ]
+  }
+]

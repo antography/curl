@@ -1,0 +1,21 @@
+[
+  {
+    "name": "css doesnt like trimming floats",
+    "id": "974c6167-c216-4c56-a5e3-d600b787a39f",
+    "icon": "../public/img/bird.jpg",
+    "location": "",
+    "position": 1,
+    "active": true
+
+  },
+  {
+    "name": "so ill just abuse js instead",
+    "id": "42d10e68-b8a0-42fb-a372-2596603a7b20",
+    "icon": "../public/img/bench.jpg",
+    "location": "",
+    "position": 2,
+    "active": false
+
+  }
+
+]

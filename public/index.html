@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,26 +21,35 @@
           <div class="user-pfp-wrapper">
             <img class="user-pfp" src="../public/img/lom.jpg" alt="Generic Profile Picture">
             <div class="user-status status-online"><i class="fa fa-circle" aria-hidden="true"></i></div>
-            <div class="user-settings-hover-wrapper" onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
+            <div class="user-settings-hover-wrapper"
+              onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
               <div class="user-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
             </div>
           </div>
           <!-- End user pfp -->
-          <div class="user-settings-quickaccess fadeout" id="u-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('u-s-qa', 0, true)">
-            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Settings</div></div>
+          <div class="user-settings-quickaccess fadeout" id="u-s-qa" tabindex="-1" style="visibility: hidden;"
+            onblur="toggleHidden('u-s-qa', 0, true)">
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Settings</div>
+            </div>
             <hr>
             <div class="user-settings-quickaccess-item has-text-light noselect">
               <div class="user-settings-quickaccess-item-status">
                 <div class="usqis-auto clickable has-text-light">Auto</div>
                 <div class="usqis-divider"></div>
-                <div class="usqis-item status-online clickable usqis-item-active"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                <div class="usqis-item status-online clickable usqis-item-active"><i class="fa fa-circle"
+                    aria-hidden="true"></i></div>
                 <div class="usqis-item status-inactive clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
                 <div class="usqis-item status-busy clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
                 <div class="usqis-item status-offline clickable"><i class="fa fa-circle" aria-hidden="true"></i></div>
               </div>
             </div>
-            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Profile</div></div>
-            <div class="user-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Notifications</div></div>
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Edit Profile</div>
+            </div>
+            <div class="user-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Manage Notifications</div>
+            </div>
           </div>
           <div class="user-titles-wrapper">
             <div class="user-title">fjhyqwadas</div>
@@ -55,29 +65,47 @@
         <!-- contextual server controls-->
         <div class="ctx-server-controls">
           <div class="ctx-server-icon-wrapper">
-            <img class="ctx-server-icon" src="../public/img/bench.jpg" alt="Generic Profile Picture">
-            <div class="ctx-server-settings-hover-wrapper" onclick="toggleHidden('c-s-qa', 1); document.getElementById('c-s-qa').focus();">
+            <img class="ctx-server-icon" id="ctx-server-icon" src="../public/img/bench.jpg" alt="Generic Profile Picture">
+            <div class="ctx-server-settings-hover-wrapper"
+              onclick="toggleHidden('c-s-qa', 1); document.getElementById('c-s-qa').focus();">
               <div class="ctx-server-settings-hover"><i class="fa fa-cog" aria-hidden="true"></i></div>
             </div>
           </div>
-          
-          <div class="ctx-server-settings-quickaccess fadeout" id="c-s-qa" tabindex="-1" style="visibility: hidden;" onblur="toggleHidden('c-s-qa', 1, true)">
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Settings</div></div>
+
+          <div class="ctx-server-settings-quickaccess fadeout" id="c-s-qa" tabindex="-1" style="visibility: hidden;"
+            onblur="toggleHidden('c-s-qa', 1, true)">
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Settings</div>
+            </div>
             <hr>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Overview</div></div>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Roles</div></div>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Users</div></div>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Channels</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Edit Overview</div>
+            </div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Manage Roles</div>
+            </div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Manage Users</div>
+            </div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Manage Channels</div>
+            </div>
             <hr>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Edit Stylesheet</div></div>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">View Logs</div></div>
-            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable"><div class="user-settings-quickaccess-item-title">Manage Notifications</div></div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Edit Stylesheet</div>
+            </div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">View Logs</div>
+            </div>
+            <div class="ctx-server-settings-quickaccess-item has-text-light noselect clickable">
+              <div class="user-settings-quickaccess-item-title">Manage Notifications</div>
+            </div>
           </div>
           <div class="ctx-server-titles-wrapper">
-            <div class="ctx-server-title"> so ill just abuse js instead</div>
+            <div class="ctx-server-title" id="ctx-building-title"> so ill just abuse js instead</div>
           </div>
         </div>
-        
+
         <div class="ctx-channel-info">
           <div class="ctx-channel-info-titles-wrapper has-text-light">
             <div class="ctx-channel-info-title">
@@ -88,7 +116,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="ctx-search">
           <div class="ctx-search-wrapper">
             <input class="ctx-search-input" type="text" placeholder="Search">
@@ -104,7 +132,7 @@
       <!-- End topbar-->
 
       <div class="content-row">
-<!-- Begin Left bar-->
+        <!-- Begin Left bar-->
         <div class="left-panel minimized" id="left-panel">
           <div class="contacts">
             <div class="contacts-icon-wrapper">
@@ -113,109 +141,34 @@
             <div class="contacts-misc-wrapper">
               <div class="contacts-misc-content">
                 <div class="contacts-misc-content">
-                <div class="contacts-titles-wrapper">
-                  <div class="contacts-title">Contacts</div>
-                  <div class="contacts-subtitle">Coming to a browser near you soon!</div>
-                </div>
-              </div>
-              </div>
-             
-            </div>
-          </div>
-<!-- domains -->
-          <div class="domain">
-            <div class="domain-icon-wrapper">
-              <img class="domain-icon" src="../public/img/bird.jpg" alt="Generic Profile Picture">
-            </div>
-            <div class="domain-misc-wrapper">
-              <div class="domain-misc-content">
-                <div class="domain-titles-wrapper">
-                  <div class="domain-title">css doesnt like trimming floats</div>
-                  <div class="domain-subtitle">1038 <i class="fa fa-users " aria-hidden="true"></i></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="domain-title-tooltip">
-              css doesnt like trimming floats
-            </div>
-            
-            </div>
-
-          <div class="domain active">
-            <div class="domain-icon-wrapper">
-              <img class="domain-icon" src="../public/img/bench.jpg" alt="Generic Profile Picture">
-            </div>
-
-            <div class="domain-misc-wrapper">
-              <div class="domain-misc-content">
-                <div class="domain-titles-wrapper">
-                  <div class="domain-title">so ill just abuse js instead</div>
-                  <div class="domain-subtitle">127 <i class="fa fa-users " aria-hidden="true"></i></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="domain-title-tooltip">
-              so ill just abuse js instead
-            </div>
-          </div>
-<!-- end domains -->
-        </div>
-<!-- End left bar-->
-<!-- Begin domain contextual menu-->
-        <div class="ctx-panel">
-          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Welcome</div></div>
-          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Rules</div></div>
-          <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> General</div></div>
-
-          <div class="ctx-domain-channel-group has-background-light" id="dcg-1121337">
-            <div class="ctx-dcg-title-wrapper  has-text-dark noselect" onclick="toggleDCG('1121337')">
-              <div class="ctx-dcg-min-max" id="dcg-minmax-1121337">-</div>
-              <div class="ctx-dcg-title">
-                Legally questional group
-              </div>
-            </div>
-            <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-1121337">
-              <div class="ctx-domain-channel-text has-text-light active noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Nothing to see here</div></div>
-              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> FBI go away</div></div>
-              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> "Homework help"</div></div>
-            </div>
-            
-          </div>
-
-          <div class="ctx-domain-channel-group has-background-light" id="dcg-11213327">
-            <div class="ctx-dcg-title-wrapper  has-text-dark noselect" onclick="toggleDCG('11213237')">
-              <div class="ctx-dcg-min-max" id="dcg-minmax-11213237">-</div>
-              <div class="ctx-dcg-title">
-                Less legally questional group
-              </div>
-            </div>
-            <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-11213237">
-              <div class="ctx-domain-channel-text has-text-dark noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Wheese Cheel</div></div>
-              
-              <div class="ctx-domain-channel-group has-background-dark" id="dcg-11213327">
-                <div class="ctx-dcg-title-wrapper  has-text-light noselect" onclick="toggleDCG('112132s37')">
-                  <div class="ctx-dcg-min-max" id="dcg-minmax-112132s37">-</div>
-                  <div class="ctx-dcg-title">
-                    Baby group
+                  <div class="contacts-titles-wrapper">
+                    <div class="contacts-title">Contacts</div>
+                    <div class="contacts-subtitle">Coming to a browser near you soon!</div>
                   </div>
                 </div>
-                <div class="ctx-dcg-child-wrapper" id="dcg-wrapper-112132s37">
-                  <div class="ctx-domain-channel-text has-text-light noselect"><div class="ctx-domain-channel-text-title"><i class="fa fa-hashtag" aria-hidden="true"></i> Gerald</div></div>
-                </div>
-                
               </div>
+
             </div>
-            
           </div>
+          <!-- domains -->
+          <div id="buildingWrapper">
+            <!-- Buildings loaded here -->
+
+          </div>
+          <!-- end domains -->
+        </div>
+        <!-- End left bar-->
+        <!-- Begin domain contextual menu-->
+        <div class="ctx-panel" id="context-panel">
+
+          <!-- Offices are loaded into here -->
 
           <div class="toggle-left-panel" onclick="toggleLeft('left-panel')">
 
           </div>
         </div>
-<!-- End domain contextual menu-->
-<!-- Begin channel context-->
+        <!-- End domain contextual menu-->
+        <!-- Begin channel context-->
         <div class="ctx-channel">
           <div class="ctx-channel-history">
             <div class="ctx-channel-history-buffer"></div> <!-- Push messages to the bottom-->
@@ -229,14 +182,28 @@
                   fjhyqwadas
                 </div>
                 <div class="sender-message-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ante vitae odio pellentesque bibendum. Curabitur in massa et mi hendrerit iaculis nec nec massa. Morbi condimentum dui id urna lobortis porttitor. Nam ornare a tellus pretium commodo. Suspendisse condimentum nisi id dui sollicitudin, et lobortis leo placerat. Integer eu congue dui. Quisque hendrerit laoreet nulla, a maximus nulla pharetra eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam imperdiet, orci at elementum interdum, nunc dui malesuada erat, placerat dictum justo massa gravida urna. Ut dapibus varius orci, nec eleifend eros consectetur vel. Quisque rutrum vel orci et sollicitudin. Nulla facilisi. Integer molestie in nisi vitae cursus. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ante vitae odio pellentesque
+                  bibendum. Curabitur in massa et mi hendrerit iaculis nec nec massa. Morbi condimentum dui id urna
+                  lobortis porttitor. Nam ornare a tellus pretium commodo. Suspendisse condimentum nisi id dui
+                  sollicitudin, et lobortis leo placerat. Integer eu congue dui. Quisque hendrerit laoreet nulla, a
+                  maximus nulla pharetra eget. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                  fames ac turpis egestas. Aliquam imperdiet, orci at elementum interdum, nunc dui malesuada erat,
+                  placerat dictum justo massa gravida urna. Ut dapibus varius orci, nec eleifend eros consectetur vel.
+                  Quisque rutrum vel orci et sollicitudin. Nulla facilisi. Integer molestie in nisi vitae cursus.
                 </div>
               </div>
             </div>
 
             <div class="ctx-channel-message-wrapper follower">
               <div class="sender-message-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ante vitae odio pellentesque bibendum. Curabitur in massa et mi hendrerit iaculis nec nec massa. Morbi condimentum dui id urna lobortis porttitor. Nam ornare a tellus pretium commodo. Suspendisse condimentum nisi id dui sollicitudin, et lobortis leo placerat. Integer eu congue dui. Quisque hendrerit laoreet nulla, a maximus nulla pharetra eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam imperdiet, orci at elementum interdum, nunc dui malesuada erat, placerat dictum justo massa gravida urna. Ut dapibus varius orci, nec eleifend eros consectetur vel. Quisque rutrum vel orci et sollicitudin. Nulla facilisi. Integer molestie in nisi vitae cursus. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ante vitae odio pellentesque
+                bibendum. Curabitur in massa et mi hendrerit iaculis nec nec massa. Morbi condimentum dui id urna
+                lobortis porttitor. Nam ornare a tellus pretium commodo. Suspendisse condimentum nisi id dui
+                sollicitudin, et lobortis leo placerat. Integer eu congue dui. Quisque hendrerit laoreet nulla, a
+                maximus nulla pharetra eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                ac turpis egestas. Aliquam imperdiet, orci at elementum interdum, nunc dui malesuada erat, placerat
+                dictum justo massa gravida urna. Ut dapibus varius orci, nec eleifend eros consectetur vel. Quisque
+                rutrum vel orci et sollicitudin. Nulla facilisi. Integer molestie in nisi vitae cursus.
               </div>
             </div>
 
@@ -254,23 +221,25 @@
 
           </div>
 
-          <div class="ctx-channel-comms"> 
-            <div class="ctx-channel-comms-status has-text-light noselect"> 
+          <div class="ctx-channel-comms">
+            <div class="ctx-channel-comms-status has-text-light noselect">
               Humphrey is nadeing Long Doors
             </div>
-            <div class="ctx-channel-comms-input-wrapper"> 
-              <div class="ctx-channel-comms-input-box"> 
+            <div class="ctx-channel-comms-input-wrapper">
+              <div class="ctx-channel-comms-input-box">
                 <span class="ctx-channel-comms-input-area has-text-light" contenteditable></span>
               </div>
 
-              <div class="ctx-channel-comms-input-attachment has-text-light"> <i class="fa fa-paperclip" aria-hidden="true"></i></div>
-              <div class="ctx-channel-comms-input-send has-text-light"> <i class="fa fa-paper-plane" aria-hidden="true"></i> </div>
-              
+              <div class="ctx-channel-comms-input-attachment has-text-light"> <i class="fa fa-paperclip"
+                  aria-hidden="true"></i></div>
+              <div class="ctx-channel-comms-input-send has-text-light"> <i class="fa fa-paper-plane"
+                  aria-hidden="true"></i> </div>
+
             </div>
-           
+
           </div>
         </div>
-<!-- End channel context -->
+        <!-- End channel context -->
       </div>
 
     </div>
@@ -281,4 +250,5 @@
   <script src="../public/js/helpers.js"></script>
   <script src="../public/js/app.js"></script>
 </body>
+
 </html>
