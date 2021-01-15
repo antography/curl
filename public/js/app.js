@@ -18,7 +18,8 @@ function findBuilding(building, target) {
 }
 
 function stripID(id){
-  return id.substring(id.indexOf("_") + 1)
+  var split = id.split('_')
+  return [split[1], split[0]]
 }
 
 function furnishOffice(floor, data, classes = "has-text-light") {
@@ -81,7 +82,9 @@ function constructBuilding(data) {
   buildingsPanel.innerHTML += template
 }
 
-
+function officeSelect(e){
+  console.log(stripID(e.target.id)[0] + " clicked")
+}
 
 function populateBuilding(id) {
   var ctxPanel = document.getElementById("context-panel");
@@ -105,9 +108,9 @@ function populateBuilding(id) {
     })
     .catch(err => { throw err });
 
-    ctxPanel.addEventListener("click", (e) => {
-      console.log(stripID(e.target.id));
-    });
+    // remove and then readd the listner to prevent the click event from firing more than once
+  ctxPanel.removeEventListener("click", officeSelect)
+  ctxPanel.addEventListener("click", officeSelect);
 }
 
 // Code for loading a new building 
@@ -123,10 +126,12 @@ function enterBuilding(data) {
 }
 
 function changeBuilding (elemId){
-  var id = stripID(elemId)
+  var stripped = stripID(elemId)
+  var id = stripped[0]
   if (id != activeBuilding){
   var data = _.findWhere (buildingManifest, {"id": id})
   enterBuilding(data)
+  console.log(stripped)
   }
 }
 
