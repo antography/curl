@@ -3,11 +3,11 @@
 ## Todo:
 
 1. Finish designing UI
-2. Add that vuejs magic(k)
+2. ~~Add that vuejs magic(k)~~ Vanillajs it is
 3. Whip up a backend
 4. Pay back technical debt
 5. ???
-6. ~~profit~~ release
+6. ~~profit~~ release 1.0.0
 
 --- 
 ## Primary goals:

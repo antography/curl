@@ -121,7 +121,9 @@ function buildingPlan() {
       var sorted = out.sort(sortByProperty('position'))
       buildingManifest = sorted;
       for (var building in sorted) {
+        
         constructBuilding(sorted[building])
+
         if (sorted[building].active) {
           enterBuilding(sorted[building])
           
