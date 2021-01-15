@@ -1,0 +1,20 @@
+[
+  {
+    "type": "channel-text",
+    "name": "General",
+    "id": "5c786049-4093-4aa0-a565-2310f70d6add",
+    "position": 3
+  },
+  {
+    "type": "channel-text",
+    "name": "Rules",
+    "id": "ac98d0a1-e2cc-4bf4-b5f7-ab617dcb08e1",
+    "position": 2
+  },
+  {
+    "type": "channel-text",
+    "name": "Welcome",
+    "id": "f002393d-a066-4178-a247-f206f639286a",
+    "position": 1
+  }
+]

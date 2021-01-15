@@ -40,8 +40,8 @@ function toggleLeft(target){
 }
 
 function toggleDCG(target){
-  var wrapper = document.getElementById(("dcg-wrapper-" + target))
-  var minmax = document.getElementById("dcg-minmax-" + target);
+  var wrapper = document.getElementById(("dcg-wrapper_" + target))
+  var minmax = document.getElementById("dcg-minmax_" + target);
   if (wrapper.classList.contains('hidden')) {
     wrapper.classList.remove('hidden')
     minmax.innerHTML = "-"
