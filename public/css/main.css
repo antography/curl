@@ -181,12 +181,8 @@ input[type=text]
   text-align: center;
 }
 
-.user-settings-quickaccess-item:hover {
-  background-color: #2e2e2e7c;
-}
-.user-settings-quickaccess-item.active {
-  background-color: #353535bb;
-}
+.user-settings-quickaccess-item:hover  { background-color: #2e2e2e7c; }
+.user-settings-quickaccess-item.active { background-color: #353535bb; }
 .user-settings-quickaccess-item > .user-settings-quickaccess-item-title {
   padding: 4px;
   padding-top: 0.4rem;
@@ -202,13 +198,14 @@ input[type=text]
   margin: 4px;
   margin-left: 64px;
   margin-right: 64px;
-  
 }
+
 .usqis-auto {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 4px;;
 }
+
 .usqis-divider{
   width: 1px;
   margin: 4px;
@@ -405,12 +402,9 @@ input[type=text]
   text-align: center;
 }
 
-.ctx-server-settings-quickaccess-item:hover {
-  background-color: #2e2e2e7c;
-}
-.ctx-server-settings-quickaccess-item.active {
-  background-color: #353535bb;
-}
+.ctx-server-settings-quickaccess-item:hover  { background-color: #2e2e2e7c; }
+.ctx-server-settings-quickaccess-item.active { background-color: #353535bb; }
+
 .ctx-server-settings-quickaccess-item > .user-settings-quickaccess-item-title {
   padding: 4px;
   padding-top: 0.4rem;
@@ -459,16 +453,16 @@ input[type=text]
   overflow: hidden;
   
 }
-.ctx-channel-info-title {
 
+.ctx-channel-info-title {
   padding-top: 8px;
   font-weight: bold;
   white-space: nowrap;
   text-overflow: " ...";
   min-width: 0px;
   overflow: hidden;
-
 }
+
 .ctx-channel-info-subtitle {
   font-size: 0.85rem;
   padding-left: 1.25rem;
@@ -492,17 +486,20 @@ input[type=text]
   height: 100%;
   overflow-x: auto;
 }
+
 .left-panel.expanded {
   min-width: 357px;
   max-width: 357px;
   transition: min-width 0.5s;
 }
+
 .left-panel.minimized {
   min-width: 64px;
   max-width: 64px;
   overflow-y: hidden;
   transition: min-width 0.5s;
 }
+
 .ctx-panel{
   background-color: #414141;
   min-width: 293px;
@@ -522,6 +519,7 @@ input[type=text]
   transition: opacity 0.5s;
   border-radius: 0px 5px 5px 0px;
 }
+
 .toggle-left-panel:hover {
   opacity: 1;
   transition: opacity 0.5s;
@@ -535,7 +533,6 @@ input[type=text]
   min-width: 357;
   background-color: #303030;
   z-index: -100;
-  
   padding-top: 4px;
   padding-bottom: 8px;
 }
@@ -551,7 +548,7 @@ input[type=text]
 }
 
 .contacts-icon {
-padding-left: 2px;
+  padding-left: 2px;
 }
 
 .contacts-misc-wrapper {
@@ -560,6 +557,7 @@ padding-left: 2px;
   float: left;
   overflow: hidden;
 }
+
 .contacts-misc-content{
   max-width: 293px;
   max-height: 293px;
@@ -611,13 +609,8 @@ padding-left: 2px;
   text-overflow: " ...";
 }
 
-.domain:hover {
-  background-color: #2A2A2A;
-}
-
-.domain.active {
-  background-color: #636363;
-}
+.domain:hover  { background-color: #2A2A2A; }
+.domain.active { background-color: #636363; }
 
 .domain-icon-wrapper{
   float: left;
@@ -692,27 +685,27 @@ padding-left: 2px;
 }
 
 .domain-title-tooltip{
-position: absolute;
-background-color: #1A1A1A;
-display: none;
-opacity: 0%;
-padding: 4px;
-border-radius: 4px;
-color: #CCCCCC;
-font-size: 0.85rem;
-left: 60px;
-z-index: 100;
-margin-top: 20px;
-max-width: 200px;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: " ...";
+  position: absolute;
+  background-color: #1A1A1A;
+  display: none;
+  opacity: 0%;
+  padding: 4px;
+  border-radius: 4px;
+  color: #CCCCCC;
+  font-size: 0.85rem;
+  left: 60px;
+  z-index: 100;
+  margin-top: 20px;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: " ...";
 }
 
 .left-panel.minimized .domain:hover .domain-title-tooltip{
-display: block;
-opacity: 100%;
-transition: opacity 025s;
+  display: block;
+  opacity: 100%;
+  transition: opacity 025s;
 }
 
 /* End domain list stuff */
@@ -730,12 +723,8 @@ transition: opacity 025s;
   cursor: pointer;
 }
 
-.ctx-domain-channel-text:hover {
-  background-color: #2e2e2e7c;
-}
-.ctx-domain-channel-text.active {
-  background-color: #353535bb;
-}
+.ctx-domain-channel-text:hover  { background-color: #2e2e2e7c; }
+.ctx-domain-channel-text.active { background-color: #353535bb; }
 .ctx-domain-channel-text > .ctx-domain-channel-text-title {
   padding: 4px;
   padding-top: 0.4rem;
@@ -911,7 +900,6 @@ padding-left: 8px;
 
 .sender-message-content {
   color: #b5b5b5;
-
 }
 
 .ctx-channel-message-wrapper.follower{
