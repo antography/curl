@@ -1,3 +1,10 @@
+/* 
+ * ========================================
+ * A nice little place to store variable that are needed
+ * on a global scope. Is it best practice? dont ask me.
+ * ========================================
+ */
+
 var activeBuilding
 var activeOffice
 var buildingManifest
@@ -13,15 +20,22 @@ function sortByProperty(property) {
   }
 }
 
-function findBuilding(building, target) {
-  return building == target;
-}
-
+// get the id and prefix of an element's id
 function stripID(id){
-  var split = id.split('_')
-  return [split[1], split[0]]
+  
+  if (id.indexOf('_') > -1) {
+    var split = id.split('_')
+    return [split[1], split[0]]
+  } 
+  return [id, null]
+ 
 }
 
+/* 
+ * Floor building and office furnishing needs a major rewrite down the road. 
+ * But for now this will have to suffice. Maybe something like a virtual DOM
+ * in the future?
+ */
 function furnishOffice(floor, data, classes = "has-text-light") {
   floor.innerHTML += `<div class="ctx-domain-channel-text ${classes} noselect" id="${data.id}"><div class="ctx-domain-channel-text-title" id="title_${data.id}"><i class="fa fa-hashtag" aria-hidden="true"></i> ${data.name}</div></div>`
 }
@@ -89,7 +103,7 @@ function officeSelect(e){
 function populateBuilding(id) {
   var ctxPanel = document.getElementById("context-panel");
   var floorplanUrl = `../temp/${id}.json`;
-  ctxPanel.innerHTML = ` <div class="toggle-left-panel" onclick="toggleLeft('left-panel')">`
+  ctxPanel.innerHTML = ` <div class="toggle-left-panel" id="toggle-left-panel" onclick="toggleLeft('left-panel')">`
 
   fetch(floorplanUrl)
     .then(res => res.json())
@@ -117,25 +131,32 @@ function populateBuilding(id) {
 function enterBuilding(data) {
 
   populateBuilding(data.id)
+  var trimmed = data.name
+  if (data.name.length > 25){
+    trimmed = data.name.substring(0, 25) + "..."
+  }
 
-  document.getElementById("ctx-building-title").innerHTML = data.name
+  document.getElementById("ctx-building-title").innerHTML = trimmed 
   document.getElementById("ctx-server-icon").src = data.icon
 
   activeBuilding = data.id
-  
+
 }
 
-function changeBuilding (elemId){
+function changeBuilding(elemId) {
   var stripped = stripID(elemId)
   var id = stripped[0]
-  if (id != activeBuilding){
-  var data = _.findWhere (buildingManifest, {"id": id})
-  enterBuilding(data)
-  console.log(stripped)
+  
+  if (id != activeBuilding) {
+    var data = _.findWhere(buildingManifest, { "id": id })
+    var currentBuilding = document.getElementById(activeBuilding)
+    var newBuilding = document.getElementById(id)
+    currentBuilding.classList.remove('active')
+    newBuilding.classList.add('active')
+    enterBuilding(data)
+
   }
 }
-
-
 
 function buildingPlan() {
   var buildingsJson = `../temp/buildings.json`;
@@ -161,7 +182,6 @@ function buildingPlan() {
     
 
     var buildingIcon = document.getElementById("buildingWrapper");
-    console.log(buildingIcon)
     buildingIcon.addEventListener("click", (e) => {
       if (e.target.id) changeBuilding(e.target.id);
      

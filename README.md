@@ -1,13 +1,30 @@
 # Curl
 
-## Todo:
+## UI Goals:
 
-1. Finish designing UI
-2. ~~Add that vuejs magic(k)~~ Vanillajs it is
-3. Whip up a backend
-4. Pay back technical debt
-5. ???
-6. ~~profit~~ release 1.0.0
+* ~~Building panel~~ - Done
+* ~~Floor panel~~ - Done
+* ~~Settings popups~~ - Done
+* Login/signup page
+* User settings page
+* Building settings page
+* Building members panel
+* File attachments
+* Image messages
+* File messages
+
+## Client JS Goals:
+* Loading buildings - Done
+* Loading Floors & offices - Done
+* Loading messages in an office
+* Loading active users into the right panel
+* 
+
+## Backend Goals:
+
+* Handle messages in different channels from different users
+* Anonymous access
+* Authentication servers
 
 --- 
 ## Primary goals:
