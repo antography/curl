@@ -86,7 +86,7 @@ function constructBuilding(data) {
 function populateBuilding(id) {
   var ctxPanel = document.getElementById("context-panel");
   var floorplanUrl = `../temp/${id}.json`;
-  ctxPanel.innerHTML = ""
+  ctxPanel.innerHTML = ` <div class="toggle-left-panel" onclick="toggleLeft('left-panel')">`
 
   fetch(floorplanUrl)
     .then(res => res.json())
@@ -122,6 +122,14 @@ function enterBuilding(data) {
   
 }
 
+function changeBuilding (elemId){
+  var id = stripID(elemId)
+  if (id != activeBuilding){
+  var data = _.findWhere (buildingManifest, {"id": id})
+  enterBuilding(data)
+  }
+}
+
 
 
 function buildingPlan() {
@@ -155,13 +163,6 @@ function buildingPlan() {
     });
 }
 
-function changeBuilding (elemId){
-  var id = stripID(elemId)
-  if (id != activeBuilding){
-  var data = _.findWhere (buildingManifest, {"id": id})
-  enterBuilding(data)
-  }
-}
 
 window.onload = function () {
   buildingPlan()
