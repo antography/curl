@@ -46,7 +46,7 @@ function constructFloor(parent, data) {
 
 function populateBuilding(id) {
   var ctxPanel = document.getElementById("context-panel");
-  var floorplanUrl = `/temp/${id}.json`;
+  var floorplanUrl = `../temp/${id}.json`;
 
   fetch(floorplanUrl)
     .then(res => res.json())
@@ -112,7 +112,7 @@ function enterBuilding(data) {
 
 
 function buildingPlan() {
-  var buildingsJson = `/temp/buildings.json`;
+  var buildingsJson = `../temp/buildings.json`;
 
   fetch(buildingsJson)
     .then(res => res.json())
