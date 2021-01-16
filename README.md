@@ -12,13 +12,14 @@
 * File attachments
 * Image messages
 * File messages
+* Easy account switching
 
 ## Client JS Goals:
 * Loading buildings - Done
 * Loading Floors & offices - Done
 * Loading messages in an office
 * Loading active users into the right panel
-* 
+* Edit personal status
 
 ## Backend Goals:
 

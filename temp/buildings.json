@@ -2,7 +2,7 @@
   {
     "name": "css doesnt like trimming floats",
     "id": "974c6167-c216-4c56-a5e3-d600b787a39f",
-    "icon": "../public/img/bird.jpg",
+    "icon": "../app/img/bird.jpg",
     "location": "",
     "position": 1,
     "active": true
@@ -11,7 +11,7 @@
   {
     "name": "so ill just abuse js instead",
     "id": "42d10e68-b8a0-42fb-a372-2596603a7b20",
-    "icon": "../public/img/bench.jpg",
+    "icon": "../app/img/bench.jpg",
     "location": "",
     "position": 2,
     "active": false
@@ -20,7 +20,7 @@
   {
     "name": "or maybe i wont",
     "id": "7aa6a17e-c6b2-4eba-94c5-3e96d87ca280",
-    "icon": "../public/img/snow.jpg",
+    "icon": "../app/img/snow.jpg",
     "location": "",
     "position": 3,
     "active": false
