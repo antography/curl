@@ -21,14 +21,14 @@ function sortByProperty(property) {
 }
 
 // get the id and prefix of an element's id
-function stripID(id){
-  
+function stripID(id) {
+
   if (id.indexOf('_') > -1) {
     var split = id.split('_')
     return [split[1], split[0]]
-  } 
+  }
   return [id, null]
- 
+
 }
 
 /* 
@@ -40,6 +40,7 @@ function furnishOffice(floor, data, classes = "has-text-light") {
   floor.innerHTML += `<div class="ctx-domain-channel-text ${classes} noselect" id="${data.id}"><div class="ctx-domain-channel-text-title" id="title_${data.id}"><i class="fa fa-hashtag" aria-hidden="true"></i> ${data.name}</div></div>`
 }
 
+// generate the wrapper for a new group
 function constructFloor(parent, data) {
   parent.innerHTML += `
           <div class="ctx-domain-channel-group ${data.classes}" id="${data.id}">
@@ -67,6 +68,8 @@ function constructFloor(parent, data) {
   }
 }
 
+
+// populate the buildings panel with another building
 function constructBuilding(data) {
 
   var buildingsPanel = document.getElementById("buildingWrapper");
@@ -96,10 +99,13 @@ function constructBuilding(data) {
   buildingsPanel.innerHTML += template
 }
 
-function officeSelect(e){
+// Switch offices
+// coming soon :tm:
+function officeSelect(e) {
   console.log(stripID(e.target.id)[0] + " clicked")
 }
 
+// Populate the office collumn with offices and floors
 function populateBuilding(id) {
   var ctxPanel = document.getElementById("context-panel");
   var floorplanUrl = `../temp/${id}.json`;
@@ -122,7 +128,7 @@ function populateBuilding(id) {
     })
     .catch(err => { throw err });
 
-    // remove and then readd the listner to prevent the click event from firing more than once
+  // remove and then readd the listner to prevent the click event from firing more than once
   ctxPanel.removeEventListener("click", officeSelect)
   ctxPanel.addEventListener("click", officeSelect);
 }
@@ -132,21 +138,22 @@ function enterBuilding(data) {
 
   populateBuilding(data.id)
   var trimmed = data.name
-  if (data.name.length > 25){
+  if (data.name.length > 25) {
     trimmed = data.name.substring(0, 25) + "..."
   }
 
-  document.getElementById("ctx-building-title").innerHTML = trimmed 
+  document.getElementById("ctx-building-title").innerHTML = trimmed
   document.getElementById("ctx-server-icon").src = data.icon
 
   activeBuilding = data.id
 
 }
 
+// Switching between buildings
 function changeBuilding(elemId) {
   var stripped = stripID(elemId)
   var id = stripped[0]
-  
+
   if (id != activeBuilding) {
     var data = _.findWhere(buildingManifest, { "id": id })
     var currentBuilding = document.getElementById(activeBuilding)
@@ -158,6 +165,7 @@ function changeBuilding(elemId) {
   }
 }
 
+// Initial building loader. 
 function buildingPlan() {
   var buildingsJson = `../temp/buildings.json`;
 
@@ -173,23 +181,21 @@ function buildingPlan() {
 
         if (sorted[building].active) {
           enterBuilding(sorted[building])
-          
+
         }
       }
-
     })
     .catch(err => { throw err });
-    
 
-    var buildingIcon = document.getElementById("buildingWrapper");
-    buildingIcon.addEventListener("click", (e) => {
-      if (e.target.id) changeBuilding(e.target.id);
-     
-    });
+
+  var buildingIcon = document.getElementById("buildingWrapper");
+  buildingIcon.addEventListener("click", (e) => {
+    if (e.target.id) changeBuilding(e.target.id);
+
+  });
 }
-
 
 window.onload = function () {
   buildingPlan()
-  
+
 }

@@ -5,7 +5,7 @@ var infoBox = document.getElementById("auth-info")
 var userAuthProvElem = document.getElementById("auth-input-authprovider")
 
 function socketConnect(authProv) {
-  socket = io(authProv);
+  socket = io(authProv, {reconnection: false});
   socket.on('connect_failed', function () {
     infoBox.innerHTML = "Couldnt connect to server"
   })
@@ -17,7 +17,6 @@ function socketConnect(authProv) {
   socket.on("disconnect", () => {
     console.log("AHHHHHHHHHHHHHHH");
   });
-
 }
 
 function verify() {
@@ -53,7 +52,7 @@ function register() {
       } else {
         infoBox.innerHTML = "Verify your Authentication Provider!"
       }
-      
+
     } else {
       infoBox.innerHTML = "Username or password is null"
     }
