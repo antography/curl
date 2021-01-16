@@ -22,7 +22,7 @@
             <div class="input-label input-label-start"> Auth provider</div>
             <input type="text" name="authprovider" id="auth-input-authprovider" class="form-input-center">
             <div class="input-label clickable"> Use Default</div>
-            <div class="input-label input-label-end clickable"> Verify</div>
+            <div class="input-label input-label-end clickable has-background-lgreen has-text-dark" id="verify-authProv"> Verify</div>
           </div>
           <div class="input-wrapper">
             <div class="input-label input-label-start "> Username</div>
@@ -32,7 +32,6 @@
             <div class="input-label input-label-start"> Password</div>
             <input type="password" name="passwd" id="auth-input-password" class="form-input">
           </div>
-
 
           <br>
           <div class="input-wrapper">
@@ -50,12 +49,14 @@
 
     <div class="notify-section">
       <div class="auth-info" id="auth-info">
+        
       </div>
     </div>
 
     <div class="padding"></div>
   </div>
   <div class="padding"></div>
+  <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
   <script src="auth.js"></script>
 </body>
 
