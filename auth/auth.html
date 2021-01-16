@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Curl Auth</title>
+  <link rel="stylesheet" href="auth.css">
 </head>
+
 <body>
-  
+
+  <div class="padding"></div>
+  <div class="vert-wrapper">
+    <div class="padding"></div>
+
+    <div class="auth-wrapper">
+
+      <div class="form-wrapper">
+        
+          <div class="input-wrapper">
+            <div class="input-label input-label-start"> Auth provider</div>
+            <input type="text" name="authprovider" id="auth-input-authprovider" class="form-input-center">
+            <div class="input-label clickable"> Use Default</div>
+            <div class="input-label input-label-end clickable"> Verify</div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-label input-label-start "> Username</div>
+            <input type="text" name="uname" id="auth-input-username" class="form-input">
+          </div>
+          <div class="input-wrapper">
+            <div class="input-label input-label-start"> Password</div>
+            <input type="password" name="passwd" id="auth-input-password" class="form-input">
+          </div>
+
+
+          <br>
+          <div class="input-wrapper">
+            <div class="padding"></div>
+            <div class="input-label input-label-start clickable has-background-green " id="login-button"> Login</div>
+            <div class="input-label input-label-end   clickable has-background-blue" id="register-button"> Register</div>
+            <div class="padding"></div>
+          </div>
+
+        
+      </div>
+      
+
+    </div>
+
+    <div class="notify-section">
+      <div class="auth-info" id="auth-info">
+      </div>
+    </div>
+
+    <div class="padding"></div>
+  </div>
+  <div class="padding"></div>
+  <script src="auth.js"></script>
 </body>
+
 </html>
