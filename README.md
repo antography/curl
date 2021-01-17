@@ -22,7 +22,7 @@ I though that seperating the UI, authentication, and communication was a good id
 * ~~Building panel~~ - Done
 * ~~Floor panel~~ - Done
 * ~~Settings popups~~ - Done
-* Login/signup page
+* Login/signup page - Done
 * User settings page
 * Building settings page
 * Building members panel
@@ -43,7 +43,7 @@ I though that seperating the UI, authentication, and communication was a good id
 
 * Handle messages in different channels from different users
 * Anonymous access
-* Authentication servers
+* Authentication servers - Done
 
 --- 
 ## Primary goals:

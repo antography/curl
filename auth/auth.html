@@ -15,41 +15,48 @@
     <div class="padding"></div>
 
     <div class="auth-wrapper">
+      <form method="POST" id="authForm" name="authForm">
+        <div class="form-wrapper">
 
-      <div class="form-wrapper">
+          <input type="text" name="ref" id="auth-page" class="noselect" readonly="readonly"
+            style="opacity: 0%; height: 0px; width: 0px;">
 
-        <div class="input-wrapper">
-          <div class="input-label input-label-start"> Auth provider</div>
-          <input type="text" name="authprovider" id="auth-input-authprovider" class="form-input-center">
-          <div class="input-label clickable"> Use Default</div>
-          <div class="input-label input-label-end clickable has-background-lgreen has-text-dark" id="verify-authProv">
-            Verify</div>
+          <div class="input-wrapper">
+            <div class="input-label input-label-start noselect"> Auth provider</div>
+            <input type="text" name="authprovider" id="auth-input-authprovider" class="form-input-center noselect">
+            <div class="input-label clickable noselect"> Use Default</div>
+            <div class="input-label input-label-end clickable has-background-lgreen has-text-dark noselect"
+              id="verify-authProv">
+              Verify</div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-label input-label-start noselect"> Username</div>
+            <input type="text" name="username" id="auth-input-username" class="form-input"
+              placeholder="Disallowed: &lt; &gt; &amp; &#47; &#92; &#39; &quot;">
+          </div>
+          <div class="input-wrapper">
+            <div class="input-label input-label-start noselect"> Password</div>
+            <input type="password" name="password" id="auth-input-password" class="form-input">
+          </div>
+
+          <br>
+          <div class="input-wrapper">
+            <div class="padding"></div>
+            <div class="input-label input-label-start clickable has-background-green noselect" id="login-button"> Login
+            </div>
+            <div class="input-label input-label-end clickable has-background-blue noselect" id="register-button">
+              Register</div>
+            <div class="padding"></div>
+          </div>
+
         </div>
-        <div class="input-wrapper">
-          <div class="input-label input-label-start "> Username</div>
-          <input type="text" name="uname" id="auth-input-username" class="form-input">
-        </div>
-        <div class="input-wrapper">
-          <div class="input-label input-label-start"> Password</div>
-          <input type="password" name="passwd" id="auth-input-password" class="form-input">
-        </div>
 
-        <br>
-        <div class="input-wrapper">
-          <div class="padding"></div>
-          <div class="input-label input-label-start clickable has-background-green " id="login-button"> Login</div>
-          <div class="input-label input-label-end   clickable has-background-blue" id="register-button"> Register</div>
-          <div class="padding"></div>
-        </div>
-
-      </div>
-
-
+      </form>
     </div>
 
     <div class="notify-section">
       <div class="auth-info" id="auth-info">
-
+        If the page is done loading, and you can see this, then your JavaScript is broken
       </div>
     </div>
 
