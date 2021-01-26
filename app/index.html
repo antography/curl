@@ -19,7 +19,7 @@
         <div class="user-controls">
           <!-- User pfp-->
           <div class="user-pfp-wrapper">
-            <img class="user-pfp" src="../app/img/lom.jpg" alt="Generic Profile Picture">
+            <img class="user-pfp" src="" id="user-pfp" alt="Generic Profile Picture">
             <div class="user-status status-online"><i class="fa fa-circle" aria-hidden="true"></i></div>
             <div class="user-settings-hover-wrapper"
               onclick="toggleHidden('u-s-qa', 0); document.getElementById('u-s-qa').focus();">
@@ -61,8 +61,8 @@
 
           </div>
           <div class="user-titles-wrapper">
-            <div class="user-title">fjhyqwadas</div>
-            <div class="user-subtitle">"If brute force doesn't work, you're not using enough of it" - Issac Arthur</div>
+            <div class="user-title" id="user-title">{{username}}</div>
+            <div class="user-subtitle" id="user-subtitle">{{subtitle}}</div>
           </div>
 
           <div class="user-audio-control-wrapper">
@@ -257,8 +257,10 @@
 
     <div id="ctx-members" class="ctx-members" style="display: none;"><br></div>
   </div>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
   <script src="../app/js/helpers.js"></script>
   <script src="../app/js/app.js"></script>
 </body>

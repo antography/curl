@@ -1,13 +1,16 @@
 /* 
  * ========================================
- * A nice little place to store variable that are needed
- * on a global scope. Is it best practice? dont ask me.
+ * A nice little place to store variable that are needed. 
+ * Is it best practice? dont ask me.
  * ========================================
  */
 
 var activeBuilding
 var activeOffice
 var buildingManifest
+
+
+
 
 function sortByProperty(property) {
   return function (a, b) {
@@ -67,7 +70,6 @@ function constructFloor(parent, data) {
     }
   }
 }
-
 
 // populate the buildings panel with another building
 function constructBuilding(data) {
@@ -195,7 +197,64 @@ function buildingPlan() {
   });
 }
 
+
+
+var authProvUrl = Cookies.get('auth_provider')
+var sessionID = Cookies.get('session_id')
+
+var userSocket = io(authProvUrl + "/user");
+var connected = 0;
+var apHasAnon = false;
+
+var authProvInfo
+var userInfo
+
+
+function setUser(data) {
+  var pfpPath 
+  if (data['pfp']) {
+    pfpPath = `${authProvUrl}/pfp/${data['userId']}`
+  } else {
+    pfpPath = `${authProvUrl}/pfp/default`
+  }
+  document.getElementById('user-pfp').src = pfpPath
+  document.getElementById('user-title').innerHTML = data['username']
+  document.getElementById('user-subtitle').innerHTML = data['subtitle']
+}
+
+userSocket.on('connect_failed', function () {
+  console.log("Couldnt connect to auth provider")
+  connected = 0;
+})
+
+userSocket.on("connect", () => {
+  console.log("Connected to Authentication Provider at " + authProvUrl)
+  connected = 1;
+  userSocket.emit("getUserInfo", sessionID)
+});
+
+userSocket.on("disconnect", () => {
+  console.log("Lost connection to auth provider")
+  connected = 0;
+});
+
+userSocket.on("message", (data) => {
+});
+
+userSocket.on("authProvInfo", (data) => {
+  authProvInfo = data
+  if (data['anon'])     {
+    apHasAnon = true;
+  } 
+});
+
+userSocket.on("userInfo", (data) => {
+  setUser(data)
+});
+
+
+
+
 window.onload = function () {
   buildingPlan()
-
 }

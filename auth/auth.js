@@ -78,7 +78,7 @@ function register() {
       }
 
     } else {
-      infoBox.innerHTML = "Username or password is null"
+      infoBox.innerHTML = "Username or password is empty"
     }
 
   } else {
