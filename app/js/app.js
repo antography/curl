@@ -77,14 +77,14 @@ function constructBuilding(data) {
   var buildingsPanel = document.getElementById("buildingWrapper");
   var activeBuffer = "";
 
-  if (data.active) {
+  if (data.position == 1) {
     activeBuffer = "active"
   }
 
   var template = `
-  <div class="domain ${activeBuffer}" id="${data.id}">
+  <div class="domain ${activeBuffer}" id="${data.bid}">
     <div class="domain-icon-wrapper" >
-      <img class="domain-icon" src="${data.icon}" alt="Generic Profile Picture" id="icon_${data.id}">
+      <img class="domain-icon" src="${data.location}/icon" alt="Generic Profile Picture" id="icon_${data.bid}">
     </div>
     <div class="domain-misc-wrapper">
       <div class="domain-misc-content">
@@ -138,16 +138,16 @@ function populateBuilding(id) {
 // Code for loading a new building 
 function enterBuilding(data) {
 
-  populateBuilding(data.id)
+  populateBuilding(data.bid)
   var trimmed = data.name
   if (data.name.length > 25) {
     trimmed = data.name.substring(0, 25) + "..."
   }
 
   document.getElementById("ctx-building-title").innerHTML = trimmed
-  document.getElementById("ctx-server-icon").src = data.icon
+  document.getElementById("ctx-server-icon").src = data.location + "/icon"
 
-  activeBuilding = data.id
+  activeBuilding = data.bid
 
 }
 
@@ -157,7 +157,7 @@ function changeBuilding(elemId) {
   var id = stripped[0]
 
   if (id != activeBuilding) {
-    var data = _.findWhere(buildingManifest, { "id": id })
+    var data = _.findWhere(buildingManifest, { "bid": id })
     var currentBuilding = document.getElementById(activeBuilding)
     var newBuilding = document.getElementById(id)
     currentBuilding.classList.remove('active')
@@ -168,27 +168,18 @@ function changeBuilding(elemId) {
 }
 
 // Initial building loader. 
-function buildingPlan() {
-  var buildingsJson = `../temp/buildings.json`;
+function buildingPlan(data) {
+  var sorted = data.sort(sortByProperty('position'))
+  buildingManifest = sorted;
+  for (var building in sorted) {
 
-  fetch(buildingsJson)
-    .then(res => res.json())
-    .then((out) => {
+    constructBuilding(sorted[building])
 
-      var sorted = out.sort(sortByProperty('position'))
-      buildingManifest = sorted;
-      for (var building in sorted) {
+    if (sorted[building].position == 1) {
+      enterBuilding(sorted[building])
 
-        constructBuilding(sorted[building])
-
-        if (sorted[building].active) {
-          enterBuilding(sorted[building])
-
-        }
-      }
-    })
-    .catch(err => { throw err });
-
+    }
+  }
 
   var buildingIcon = document.getElementById("buildingWrapper");
   buildingIcon.addEventListener("click", (e) => {
@@ -211,7 +202,8 @@ var userInfo
 
 
 function setUser(data) {
-  var pfpPath 
+  var pfpPath
+  userInfo = data 
   if (data['pfp']) {
     pfpPath = `${authProvUrl}/pfp/${data['userId']}`
   } else {
@@ -220,6 +212,8 @@ function setUser(data) {
   document.getElementById('user-pfp').src = pfpPath
   document.getElementById('user-title').innerHTML = data['username']
   document.getElementById('user-subtitle').innerHTML = data['subtitle']
+
+  buildingPlan(data['buildings'])
 }
 
 userSocket.on('connect_failed', function () {
@@ -251,10 +245,3 @@ userSocket.on("authProvInfo", (data) => {
 userSocket.on("userInfo", (data) => {
   setUser(data)
 });
-
-
-
-
-window.onload = function () {
-  buildingPlan()
-}
