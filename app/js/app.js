@@ -194,7 +194,7 @@ var authProvUrl = Cookies.get('auth_provider')
 var sessionID = Cookies.get('session_id')
 
 var userSocket = io(authProvUrl + "/user");
-var connected = 0;
+var authConnected = 0;
 var apHasAnon = false;
 
 var authProvInfo
@@ -213,23 +213,25 @@ function setUser(data) {
   document.getElementById('user-title').innerHTML = data['username']
   document.getElementById('user-subtitle').innerHTML = data['subtitle']
 
+
+  document.getElementById("buildingWrapper").innerHTML = "";
   buildingPlan(data['buildings'])
 }
 
 userSocket.on('connect_failed', function () {
   console.log("Couldnt connect to auth provider")
-  connected = 0;
+  authConnected = 0;
 })
 
 userSocket.on("connect", () => {
   console.log("Connected to Authentication Provider at " + authProvUrl)
-  connected = 1;
+  authConnected = 1;
   userSocket.emit("getUserInfo", sessionID)
 });
 
 userSocket.on("disconnect", () => {
   console.log("Lost connection to auth provider")
-  connected = 0;
+  authConnected = 0;
 });
 
 userSocket.on("message", (data) => {
